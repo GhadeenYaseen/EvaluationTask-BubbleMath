@@ -534,7 +534,7 @@ TextureImporter:
       213: 3580383877678356342
     second: UI Buttons_176
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 13
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -551,10 +551,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -593,6 +595,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -604,6 +608,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -616,6 +621,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
@@ -628,6 +634,7 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+    ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
@@ -4360,9 +4367,186 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      UI Buttons_0: -1419970878905487431
+      UI Buttons_1: -136713083590537952
+      UI Buttons_10: 3513250345438532135
+      UI Buttons_100: -112908407168186908
+      UI Buttons_101: 2993623495111434178
+      UI Buttons_102: -4235749318169880348
+      UI Buttons_103: 2033194529108783809
+      UI Buttons_104: 8628233593275767888
+      UI Buttons_105: -8255899961937731148
+      UI Buttons_106: -4578909918183410059
+      UI Buttons_107: 7385709061357901685
+      UI Buttons_108: -2393003443526350880
+      UI Buttons_109: -7882313581550288011
+      UI Buttons_11: -4799507861393958813
+      UI Buttons_110: 3409866579154209641
+      UI Buttons_111: 6939867332610534269
+      UI Buttons_112: 8455233649282521433
+      UI Buttons_113: 6695704137564587236
+      UI Buttons_114: -2726256010363432959
+      UI Buttons_115: -5092558387755632437
+      UI Buttons_116: -1472312499345608044
+      UI Buttons_117: -7382490785065414241
+      UI Buttons_118: 4385373972036626944
+      UI Buttons_119: 7089867732652074712
+      UI Buttons_12: 8994152647394611197
+      UI Buttons_120: -1196363189344463553
+      UI Buttons_121: -7164623373500682605
+      UI Buttons_122: -4777227595291847905
+      UI Buttons_123: -6970740177955473537
+      UI Buttons_124: 776748399855520689
+      UI Buttons_125: 1325411825955068635
+      UI Buttons_126: 4815488654984928383
+      UI Buttons_127: -6896239134135643918
+      UI Buttons_128: -7824385397019372816
+      UI Buttons_129: -5380514191341175971
+      UI Buttons_13: -4983514625242729057
+      UI Buttons_130: -5202731487682450767
+      UI Buttons_131: 7383798357081476153
+      UI Buttons_132: -5354146219225171914
+      UI Buttons_133: 3816079275946916095
+      UI Buttons_134: -3743702534044212727
+      UI Buttons_135: 4728518505125545129
+      UI Buttons_136: 7080742560692201767
+      UI Buttons_137: 8604323755390741757
+      UI Buttons_138: 1107266501036863352
+      UI Buttons_139: -4610165635489096516
+      UI Buttons_14: 5894681668729617692
+      UI Buttons_140: -4594311185212723
+      UI Buttons_141: 3376812696835880442
+      UI Buttons_142: 4090866138986212382
+      UI Buttons_143: -3302630828549830689
+      UI Buttons_144: -7454744258308074516
+      UI Buttons_145: 7484164865916671637
+      UI Buttons_146: 8542656554916715231
+      UI Buttons_147: -1949496056324620257
+      UI Buttons_148: 4265722872609463924
+      UI Buttons_149: -1412858486311739309
+      UI Buttons_15: -2420860678819750
+      UI Buttons_150: 7833785675566552765
+      UI Buttons_151: -149540935466072971
+      UI Buttons_152: 7263586732815441577
+      UI Buttons_153: 6833461954564912192
+      UI Buttons_154: -8101130992731233414
+      UI Buttons_155: 4757326164066154910
+      UI Buttons_156: -7373229429266839771
+      UI Buttons_157: 5470799877410720736
+      UI Buttons_158: -952626267950649596
+      UI Buttons_159: -7294526381468657632
+      UI Buttons_16: 5770040898989268890
+      UI Buttons_160: 6739137846300953119
+      UI Buttons_161: -1749472490723133078
+      UI Buttons_162: -662387122587860331
+      UI Buttons_163: -8460501514766127804
+      UI Buttons_164: -8706085687065965571
+      UI Buttons_165: 2453572928031964308
+      UI Buttons_166: 3197286649490671053
+      UI Buttons_167: 3539894970543194610
+      UI Buttons_168: -4899155793626243759
+      UI Buttons_169: 7478252845051594478
+      UI Buttons_17: -156189328321942883
+      UI Buttons_170: -4869814131032484621
+      UI Buttons_171: 1251126183986256039
+      UI Buttons_172: 5412787697491994101
+      UI Buttons_173: 6926467392344233618
+      UI Buttons_174: 7638063521327327001
+      UI Buttons_175: -2747226920486140399
+      UI Buttons_176: 3580383877678356342
+      UI Buttons_18: 3948272911531216850
+      UI Buttons_19: 7738965188547488126
+      UI Buttons_2: -1593887382638395662
+      UI Buttons_20: -8450153947347268608
+      UI Buttons_21: 2770775669771962001
+      UI Buttons_22: 4592064031987991633
+      UI Buttons_23: 1574726985668626755
+      UI Buttons_24: -6288110231863072459
+      UI Buttons_25: 8086601873837653764
+      UI Buttons_26: 6085595385370459328
+      UI Buttons_27: 5612586880837319859
+      UI Buttons_28: 2572191519541749424
+      UI Buttons_29: -8392579033691660742
+      UI Buttons_3: -5042846141009037214
+      UI Buttons_30: -4238007593930406274
+      UI Buttons_31: -6085833246072883369
+      UI Buttons_32: 5779388158644556771
+      UI Buttons_33: 5933443993694597436
+      UI Buttons_34: -5203014063262685739
+      UI Buttons_35: -1538498739347129563
+      UI Buttons_36: -6239922569883264092
+      UI Buttons_37: 8794943501352298491
+      UI Buttons_38: 4208754050318697224
+      UI Buttons_39: -7230970181891549328
+      UI Buttons_4: -4995363822181820295
+      UI Buttons_40: 8674869014494765844
+      UI Buttons_41: -3309363974161834481
+      UI Buttons_42: -9022815264289893056
+      UI Buttons_43: -5107540295940975606
+      UI Buttons_44: 4025224733472382741
+      UI Buttons_45: 1531630668490559199
+      UI Buttons_46: -3702378555419721773
+      UI Buttons_47: 3554723726784198032
+      UI Buttons_48: -5372627318031616277
+      UI Buttons_49: -2963177692080659327
+      UI Buttons_5: 3751861321024693699
+      UI Buttons_50: -4300584390885110993
+      UI Buttons_51: 1390098710941502502
+      UI Buttons_52: -3099324724900587267
+      UI Buttons_53: -1139723984246630099
+      UI Buttons_54: -6215895836592036003
+      UI Buttons_55: -5401817881369480894
+      UI Buttons_56: 5792534945583333827
+      UI Buttons_57: 352462458628106220
+      UI Buttons_58: 5527197610476374955
+      UI Buttons_59: 522763322040673188
+      UI Buttons_6: -8860201328584449801
+      UI Buttons_60: -1796063223472449673
+      UI Buttons_61: 5751814657695832997
+      UI Buttons_62: -2756567851465665161
+      UI Buttons_63: -6553656643372577815
+      UI Buttons_64: -6579563243824275721
+      UI Buttons_65: -1338839942815881142
+      UI Buttons_66: -5574483785346979855
+      UI Buttons_67: -1023141263938803949
+      UI Buttons_68: -7727833095624133093
+      UI Buttons_69: 2901563999799265891
+      UI Buttons_7: 8001750217902845393
+      UI Buttons_70: 8842804065437304627
+      UI Buttons_71: -726055343508743071
+      UI Buttons_72: -7089331415592321440
+      UI Buttons_73: -3814402002536742926
+      UI Buttons_74: 7172570962644515807
+      UI Buttons_75: -1186415104031115055
+      UI Buttons_76: 718457829762333458
+      UI Buttons_77: -7595547223355128761
+      UI Buttons_78: 4863525485466899218
+      UI Buttons_79: 117181520159317339
+      UI Buttons_8: 4153256411033546051
+      UI Buttons_80: -2647038414844310461
+      UI Buttons_81: -5636217116883382627
+      UI Buttons_82: 6668321575017821285
+      UI Buttons_83: 7956608704542175905
+      UI Buttons_84: -8517543361236914020
+      UI Buttons_85: 4746554148603323845
+      UI Buttons_86: -974806006290287004
+      UI Buttons_87: 3771175649746918284
+      UI Buttons_88: 2954520222140373688
+      UI Buttons_89: -4034153846610076203
+      UI Buttons_9: -8280338923874376293
+      UI Buttons_90: 5408832321215776034
+      UI Buttons_91: 3950429384669080307
+      UI Buttons_92: 7468537312077878144
+      UI Buttons_93: -1977142284171525016
+      UI Buttons_94: 8322496421643948951
+      UI Buttons_95: -7010671542134115392
+      UI Buttons_96: -2833369029536169028
+      UI Buttons_97: -1560607920774776184
+      UI Buttons_98: -161071702609944255
+      UI Buttons_99: 4879475399435339004
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
