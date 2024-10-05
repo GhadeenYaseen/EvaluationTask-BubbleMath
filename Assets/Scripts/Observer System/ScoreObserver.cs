@@ -26,17 +26,17 @@ public class ScoreObserver : MonoBehaviour
 
     public void OnNotify()
     {
-        //call obj pool to disable objects
         Debug.Log("observer notified");
         ValidateAnswer(); 
     }
 
     private void ValidateAnswer()
     {
-        Debug.Log("clicked: " + ScoreMiddleMan.middleManInstance._clickedAnswer + " , correct: " + ScoreMiddleMan.middleManInstance._correctAnswer);
         if(ScoreMiddleMan.middleManInstance._clickedAnswer == ScoreMiddleMan.middleManInstance._correctAnswer)
         {
             ScoreManager.scoreManagerInstance.isCorrectAnswer = true;
+            FactoriesManager.factoriesManagerInstance.FireFactories();
+            
         }
         else
         {

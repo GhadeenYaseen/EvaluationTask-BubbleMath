@@ -3275,7 +3275,7 @@ MonoBehaviour:
   winPanel: {fileID: 740190542}
   finalScore: {fileID: 227055508}
   timerText: {fileID: 355446917}
-  RemainingTime: 15
+  RemainingTime: 60
 --- !u!1 &2085096857
 GameObject:
   m_ObjectHideFlags: 0

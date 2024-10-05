@@ -35,6 +35,11 @@ public class BubbleButton : MonoBehaviour
                 Debug.Log("mouse cast hit bubble");
                 ScoreMiddleMan.middleManInstance.GetClickedAnswer(int.Parse(gameObject.GetComponentInChildren<TextMeshPro>().text));
                 ScoreMiddleMan.middleManInstance.NotifyObservers(this);
+                
+                if(gameObject.GetComponent<AdditionBubbleProduct>() != null)
+                {
+                    Destroy(gameObject);
+                }
             }
         }
     }
