@@ -1,12 +1,9 @@
-using System;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreObserver : MonoBehaviour
 {
     [SerializeField] GameObject middleManToObserve;
 
-    private int clickedAnswer=8, correctAnswer=9;
 
     //add self to observers list of button subject
     private void Awake() 
@@ -29,7 +26,6 @@ public class ScoreObserver : MonoBehaviour
 
     public void OnNotify()
     {
-        //validate answer
         //call obj pool to disable objects
         Debug.Log("observer notified");
         ValidateAnswer(); 
@@ -37,10 +33,12 @@ public class ScoreObserver : MonoBehaviour
 
     private void ValidateAnswer()
     {
-        if(clickedAnswer == correctAnswer)
+        Debug.Log("validate answer func in observer");
+
+        if(ScoreMiddleMan.middleManInstance._clickedAnswer == ScoreMiddleMan.middleManInstance._correctAnswer)
         {
             Debug.Log("ayy correct answer");
-            //call update score and streak
+            ScoreManager.scoreManagerInstance.UpdateScore();
         }
         else
         {

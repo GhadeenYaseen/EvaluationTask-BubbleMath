@@ -6,8 +6,10 @@ public class RandomBubbleSpawner : MonoBehaviour
 {
     [SerializeField] private RandomBubble _randomBubblePrefab;
     [SerializeField] private int _spawnAmount = 2;
+    private int answer;
 
     private ObjectPool<RandomBubble> _randomBubblesPool;
+
 
     // object pool set up
     void Start()
@@ -22,9 +24,8 @@ public class RandomBubbleSpawner : MonoBehaviour
                         {
                             //set text here
                             randomBubble.gameObject.GetComponentInChildren<TextMeshPro>().text = 
-                                Mathf.FloorToInt(UnityEngine.Random.Range(0f, 10f)).ToString();
+                                GenerateRandomAnswer().ToString();
                             randomBubble.gameObject.SetActive(true);
-                            
                         },
                     randomBubble => 
                         {
@@ -49,6 +50,12 @@ public class RandomBubbleSpawner : MonoBehaviour
             var bubble = _randomBubblesPool.Get();
             bubble.Init(KillBubble);
         }
+    }
+
+    private int GenerateRandomAnswer()
+    {
+        answer = Mathf.FloorToInt(UnityEngine.Random.Range(0f, 10f));
+        return answer;
     }
 
     private Vector3 RandomSpawnPosition()

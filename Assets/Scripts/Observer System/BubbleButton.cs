@@ -1,9 +1,10 @@
+using TMPro;
 using UnityEngine;
 
 public class BubbleButton : MonoBehaviour
 {
     [HideInInspector] public static BubbleButton bubbleButtonInstance { get; private set;}
-    private int _clickedBubble, _correctAnswer;
+    
     private Collider2D _collider;
 
 
@@ -15,7 +16,6 @@ public class BubbleButton : MonoBehaviour
     private void Start() 
     {
         _collider = GetComponent<Collider2D>();
-        Debug.Log("start");
     }
 
     private void Update() 
@@ -34,12 +34,8 @@ public class BubbleButton : MonoBehaviour
             {
                 Debug.Log("mouse cast hit bubble");
                 ScoreMiddleMan.middleManInstance.NotifyObservers(this);
+                ScoreMiddleMan.middleManInstance.GetClickedAnswer(int.Parse(gameObject.GetComponentInChildren<TextMeshPro>().text));
             }
         }
-    }
-
-    public void  GetCorrectAnswer (int correctAnswer)
-    {
-        _correctAnswer = correctAnswer;
     }
 }

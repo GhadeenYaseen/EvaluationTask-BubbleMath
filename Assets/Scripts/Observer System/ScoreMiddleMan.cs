@@ -8,7 +8,9 @@ using UnityEngine;
 
 public class ScoreMiddleMan : MonoBehaviour
 {
-    [HideInInspector] public static ScoreMiddleMan middleManInstance {get; private set;}   
+    [HideInInspector] public static ScoreMiddleMan middleManInstance {get; private set;}
+    
+    [HideInInspector] public int _clickedAnswer, _correctAnswer;
     public event Action BubbleClicked;
 
     private void Awake() 
@@ -20,5 +22,15 @@ public class ScoreMiddleMan : MonoBehaviour
     {
         Debug.Log("middle man notify func");
         BubbleClicked?.Invoke();
+    }
+
+    public void  GetCorrectAnswer (int correctAnswer)
+    {
+        _correctAnswer = correctAnswer;
+    }
+
+    public void  GetClickedAnswer (int clickedAnswer)
+    {
+        _clickedAnswer = clickedAnswer;
     }
 }

@@ -15,7 +15,7 @@ public class AdditionBubbleProduct : MonoBehaviour, IProduct
         textUI.text = " ";
 
         twoNumbersResult = firstNumber + secondNumber;
-        BubbleButton.bubbleButtonInstance.GetCorrectAnswer(twoNumbersResult);
+        ScoreMiddleMan.middleManInstance.GetCorrectAnswer(twoNumbersResult);
 
         textUI.text = twoNumbersResult.ToString();
     }
