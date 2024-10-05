@@ -33,16 +33,16 @@ public class ScoreObserver : MonoBehaviour
 
     private void ValidateAnswer()
     {
-        Debug.Log("validate answer func in observer");
-
+        Debug.Log("clicked: " + ScoreMiddleMan.middleManInstance._clickedAnswer + " , correct: " + ScoreMiddleMan.middleManInstance._correctAnswer);
         if(ScoreMiddleMan.middleManInstance._clickedAnswer == ScoreMiddleMan.middleManInstance._correctAnswer)
         {
-            Debug.Log("ayy correct answer");
-            ScoreManager.scoreManagerInstance.UpdateScore();
+            ScoreManager.scoreManagerInstance.isCorrectAnswer = true;
         }
         else
         {
-            Debug.Log("naur incorrect answer");
+            ScoreManager.scoreManagerInstance.isCorrectAnswer = false;
         }
+        
+        ScoreManager.scoreManagerInstance.UpdateUIStats();
     }
 }

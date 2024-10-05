@@ -38,7 +38,6 @@ public class AdditionBubbleProduct : MonoBehaviour, IProduct
 
     public void GetNumbers(int num1, int num2)
     {
-        //also send to bubbles observer system to create correct answer bubble
         firstNumber = num1;
         secondNumber = num2;
     }

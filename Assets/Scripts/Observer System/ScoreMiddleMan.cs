@@ -20,7 +20,6 @@ public class ScoreMiddleMan : MonoBehaviour
 
     public void NotifyObservers(BubbleButton bubbleButton)
     {
-        Debug.Log("middle man notify func");
         BubbleClicked?.Invoke();
     }
 

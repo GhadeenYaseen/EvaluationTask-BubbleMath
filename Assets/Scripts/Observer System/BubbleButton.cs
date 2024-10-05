@@ -29,12 +29,12 @@ public class BubbleButton : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
             
-            Debug.Log("ray hit this guy -> " + hit.collider.gameObject.name);
+           // Debug.Log("ray hit this guy -> " + hit.collider.gameObject.name);
             if(hit.collider == this._collider)
             {
                 Debug.Log("mouse cast hit bubble");
-                ScoreMiddleMan.middleManInstance.NotifyObservers(this);
                 ScoreMiddleMan.middleManInstance.GetClickedAnswer(int.Parse(gameObject.GetComponentInChildren<TextMeshPro>().text));
+                ScoreMiddleMan.middleManInstance.NotifyObservers(this);
             }
         }
     }

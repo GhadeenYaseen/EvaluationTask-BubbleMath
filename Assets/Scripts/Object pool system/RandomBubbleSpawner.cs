@@ -9,8 +9,7 @@ public class RandomBubbleSpawner : MonoBehaviour
     private int answer;
 
     private ObjectPool<RandomBubble> _randomBubblesPool;
-
-
+    
     // object pool set up
     void Start()
     {

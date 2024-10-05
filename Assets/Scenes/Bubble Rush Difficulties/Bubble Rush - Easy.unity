@@ -2418,7 +2418,7 @@ GameObject:
   - component: {fileID: 1777515923}
   - component: {fileID: 1777515922}
   m_Layer: 5
-  m_Name: Background
+  m_Name: streaks Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2571,8 +2571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96d03b6c5274a144481eec732f69c3ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isCorrectAnswer: 0
   scoreText: {fileID: 107695344}
   scoreAddedAmount: 10
+  streakBubble: {fileID: 1777515920}
+  streakText: {fileID: 2109840855}
 --- !u!1 &2087973581
 GameObject:
   m_ObjectHideFlags: 0
