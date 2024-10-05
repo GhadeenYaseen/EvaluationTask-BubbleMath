@@ -11,7 +11,7 @@ public class MathProblemFactory : Factory
     [HideInInspector] public int FirstNumber;
     [HideInInspector] public int SecondNumber;
 
-    [SerializeField] private GameObject _currentProduct;
+    [SerializeField] private GameObject _currentProduct, _position;
 
     private void Awake() 
     {
@@ -25,11 +25,11 @@ public class MathProblemFactory : Factory
         }
     }
 
-    public override IProduct GetProduct(Transform position)
+    public override IProduct GetProduct()
     {
         GenerateEquation();
 
-        GameObject instance = Instantiate(_currentProduct, position.position, Quaternion.identity);
+        GameObject instance = Instantiate(_currentProduct, _position.transform.position, Quaternion.identity);
         IProduct newProduct = instance.GetComponent<IProduct>();
         newProduct.GetNumbers(FirstNumber, SecondNumber);
 
@@ -41,7 +41,5 @@ public class MathProblemFactory : Factory
     {
         FirstNumber = Mathf.FloorToInt(Random.Range(0f, 10f));
         SecondNumber = Mathf.FloorToInt(Random.Range(0f, 10f));
-
-        Debug.Log("generated numbers" + FirstNumber + " " + SecondNumber);
     }
 }

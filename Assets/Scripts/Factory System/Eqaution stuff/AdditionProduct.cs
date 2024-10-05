@@ -7,26 +7,23 @@ public class AdditionProduct : MonoBehaviour, IProduct
 
     [HideInInspector] private int firstNumber;
     [HideInInspector] private int secondNumber;
-    [SerializeField] private TextMeshProUGUI textUI;
+    [SerializeField] private TextMeshPro textUI;
 
-    public TextMeshProUGUI TextUI { get => textUI; set => textUI = value; }
+    public TextMeshPro TextUI { get => textUI; set => textUI = value; }
 
     private void Awake() 
     {
         if(_additionProductInstance != null )
         {
-            Debug.Log("instance destroyed");
             Destroy(_additionProductInstance.gameObject);
         }
-            Debug.Log("instance is assigned");
-            _additionProductInstance = this;
         
+        _additionProductInstance = this;
     }
 
     public void DisplayProduct()
     {
         textUI.text = " ";
-        Debug.Log("Addition product" + firstNumber + " " + secondNumber);
         textUI.text = firstNumber + " + " + secondNumber;
     }
 

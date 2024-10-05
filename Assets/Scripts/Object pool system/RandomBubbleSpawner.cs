@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.Pool;
 
@@ -10,14 +9,32 @@ public class RandomBubbleSpawner : MonoBehaviour
 
     private ObjectPool<RandomBubble> _randomBubblesPool;
 
+    // object pool set up
     void Start()
     {
         _randomBubblesPool = new ObjectPool<RandomBubble>
                 (
-                    () => {return Instantiate(_randomBubblePrefab, RandomSpawnPosition(), Quaternion.identity);},
-                    randomBubble => {randomBubble.gameObject.SetActive(true);},
-                    randomBubble => {randomBubble.gameObject.SetActive(false); randomBubble.gameObject.transform.position = RandomSpawnPosition();},
-                    randomBubble => {Destroy(randomBubble.gameObject);},
+                    () => 
+                        {
+                            return Instantiate(_randomBubblePrefab, RandomSpawnPosition(), Quaternion.identity);
+                        },
+                    randomBubble => 
+                        {
+                            //set text here
+                            randomBubble.gameObject.GetComponentInChildren<TextMeshPro>().text = 
+                                Mathf.FloorToInt(UnityEngine.Random.Range(0f, 10f)).ToString();
+                            randomBubble.gameObject.SetActive(true);
+                            
+                        },
+                    randomBubble => 
+                        {
+                            randomBubble.gameObject.SetActive(false); 
+                            randomBubble.gameObject.transform.position = RandomSpawnPosition();
+                        },
+                    randomBubble => 
+                        {
+                            Destroy(randomBubble.gameObject);
+                        },
                     false,
                     5, 7
                 );

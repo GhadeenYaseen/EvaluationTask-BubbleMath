@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class ScoreObserver : MonoBehaviour
 {
-    [SerializeField] GameObject subjectToObserve;
+    [SerializeField] GameObject middleManToObserve;
 
     private int clickedAnswer=8, correctAnswer=9;
 
     //add self to observers list of button subject
     private void Awake() 
     {
-        if(subjectToObserve != null)
+        if(middleManToObserve != null)
         {
             Debug.Log("subscribed");
-            subjectToObserve.GetComponent<BubbleButton>().BubbleClicked += OnNotify;
+            middleManToObserve.GetComponent<ScoreMiddleMan>().BubbleClicked += OnNotify;
         }
     }
 
     //remove self from observers list of button subject
     private void OnDestroy() 
     {
-        if(subjectToObserve != null)
+        if(middleManToObserve != null)
         {
-            subjectToObserve.GetComponent<BubbleButton>().BubbleClicked -= OnNotify;
+            middleManToObserve.GetComponent<ScoreMiddleMan>().BubbleClicked -= OnNotify;
         }
     }
 
