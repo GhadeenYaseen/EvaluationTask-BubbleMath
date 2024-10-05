@@ -1,18 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameObject winPanel;
+    [SerializeField] private TextMeshProUGUI finalScore;
+    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private float RemainingTime;
+
     void Start()
     {
-        
+        Time.timeScale = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(RemainingTime > 0)
+        {
+            RemainingTime -= Time.deltaTime;
+        }
+        else if(RemainingTime < 0)
+        {
+            RemainingTime = 0;
+            DisplayWinPanel();
+        }
+
+        int Seconds = Mathf.FloorToInt(RemainingTime % 60);
+        timerText.text = "Time: " + Seconds + "s";
+    }
+
+    public void DisplayWinPanel()
+    {
+        Time.timeScale = 0;
+        finalScore.text = "Score " + ScoreManager.scoreManagerInstance._scoreCount;
+        winPanel.SetActive(true);
+    }
+
+    public void ReplayRound()
+    {
+        Time.timeScale = 1;
     }
 }

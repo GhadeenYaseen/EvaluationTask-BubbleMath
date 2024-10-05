@@ -12,7 +12,6 @@ public class GameStateManager : MonoBehaviour
                 _instance = new GameStateManager();
             return _instance;
         }
-        
     }
 
     public GameState CurrentGameState{get; private set;}

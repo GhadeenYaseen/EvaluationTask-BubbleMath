@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private int scoreAddedAmount;
-    private int _scoreCount;
+    [HideInInspector] public int _scoreCount;
 
     [SerializeField] private GameObject streakBubble;
     [SerializeField] private TextMeshProUGUI streakText;
