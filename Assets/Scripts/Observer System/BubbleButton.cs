@@ -7,6 +7,8 @@ public class BubbleButton : MonoBehaviour
     
     private Collider2D _collider;
 
+    [SerializeField] ParticleSystem burstParticles;
+    private ParticleSystem _burstParticlesInstance;
 
     private void Awake() 
     {
@@ -35,12 +37,20 @@ public class BubbleButton : MonoBehaviour
                 Debug.Log("mouse cast hit bubble");
                 ScoreMiddleMan.middleManInstance.GetClickedAnswer(int.Parse(gameObject.GetComponentInChildren<TextMeshPro>().text));
                 ScoreMiddleMan.middleManInstance.NotifyObservers(this);
+                StartBurstParticles();
+                
                 
                 if(gameObject.GetComponent<AdditionBubbleProduct>() != null)
                 {
+                    
                     Destroy(gameObject);
                 }
             }
         }
+    }
+
+    private void StartBurstParticles()
+    {
+        _burstParticlesInstance = Instantiate(burstParticles, transform.position, Quaternion.identity);
     }
 }

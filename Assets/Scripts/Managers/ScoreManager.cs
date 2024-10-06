@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using EZCameraShake;
 
 public class ScoreManager : MonoBehaviour
 {
@@ -43,6 +44,7 @@ public class ScoreManager : MonoBehaviour
         else
         {
             Debug.Log("reset streak");
+            CameraShaker.Instance.ShakeOnce(3f, 3f, 0.2f, 0.2f);
             _streakCount = 0;
             streakText.text = " ";
             streakBubble.SetActive(false);

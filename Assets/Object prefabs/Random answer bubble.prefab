@@ -185,10 +185,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6329110854335064166}
   - component: {fileID: 4254131290089607773}
+  - component: {fileID: 8093992465279736104}
   - component: {fileID: 1054515135957392519}
   - component: {fileID: 3409969545128780337}
   - component: {fileID: -8866227191288419970}
-  - component: {fileID: 8093992465279736104}
   m_Layer: 0
   m_Name: Random answer bubble
   m_TagString: Untagged
@@ -266,6 +266,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &8093992465279736104
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8851584360403854719}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!58 &1054515135957392519
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -314,6 +341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e643d312f82fdcf41971c4d6d91b33f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  burstParticles: {fileID: 864062481037583097, guid: 9eb362bbb820c434bb578a574082db9e, type: 3}
 --- !u!114 &-8866227191288419970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -326,30 +354,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d81d2e2d7d6f7704b83f97d238968086, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!50 &8093992465279736104
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8851584360403854719}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 0
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
