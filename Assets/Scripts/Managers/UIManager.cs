@@ -4,8 +4,10 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject winPanel;
+
     [SerializeField] private TextMeshProUGUI finalScore;
     [SerializeField] private TextMeshProUGUI timerText;
+
     [SerializeField] private float RemainingTime;
 
     void Start()
@@ -19,7 +21,7 @@ public class UIManager : MonoBehaviour
         {
             RemainingTime -= Time.deltaTime;
         }
-        else if(RemainingTime < 0)
+        else if(RemainingTime <= 0)
         {
             RemainingTime = 0;
             DisplayWinPanel();
@@ -36,8 +38,13 @@ public class UIManager : MonoBehaviour
         winPanel.SetActive(true);
     }
 
-    public void ReplayRound()
+    public void PlayRound()
     {
         Time.timeScale = 1;
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0;
     }
 }

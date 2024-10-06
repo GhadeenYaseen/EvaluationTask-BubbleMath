@@ -4,11 +4,17 @@ using UnityEngine.Pool;
 
 public class RandomBubbleSpawner : MonoBehaviour
 {
+    [HideInInspector] public static RandomBubbleSpawner bubbleSpawnerInstance {get; private set;}
+
     [SerializeField] private RandomBubble _randomBubblePrefab;
     [SerializeField] private int _spawnAmount = 2;
     private int answer;
 
     private ObjectPool<RandomBubble> _randomBubblesPool;
+
+    private void Awake() {
+        bubbleSpawnerInstance = this;
+    }
     
     // object pool set up
     void Start()
@@ -67,7 +73,7 @@ public class RandomBubbleSpawner : MonoBehaviour
         return vec3;
     }
 
-    private void KillBubble(RandomBubble bubble)
+    public void KillBubble(RandomBubble bubble)
     {
         _randomBubblesPool.Release(bubble);
     }

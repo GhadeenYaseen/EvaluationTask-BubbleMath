@@ -9,10 +9,13 @@ public class BubbleButton : MonoBehaviour
 
     [SerializeField] ParticleSystem burstParticles;
     private ParticleSystem _burstParticlesInstance;
+    private RandomBubble randomBubble;
 
     private void Awake() 
     {
         bubbleButtonInstance = this;
+
+        randomBubble = gameObject.GetComponent<RandomBubble>();
     }
 
     private void Start() 
@@ -31,18 +34,21 @@ public class BubbleButton : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
             
-           // Debug.Log("ray hit this guy -> " + hit.collider.gameObject.name);
             if(hit.collider == this._collider)
             {
                 Debug.Log("mouse cast hit bubble");
                 ScoreMiddleMan.middleManInstance.GetClickedAnswer(int.Parse(gameObject.GetComponentInChildren<TextMeshPro>().text));
                 ScoreMiddleMan.middleManInstance.NotifyObservers(this);
+
                 StartBurstParticles();
-                
+
+                if(randomBubble != null)
+                {
+                    RandomBubbleSpawner.bubbleSpawnerInstance.KillBubble(randomBubble);
+                }
                 
                 if(gameObject.GetComponent<AdditionBubbleProduct>() != null)
                 {
-                    
                     Destroy(gameObject);
                 }
             }
