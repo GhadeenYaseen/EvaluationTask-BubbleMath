@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -9,12 +7,8 @@ public class SubtractionProduct : MonoBehaviour, IProduct
 
     [HideInInspector] private int firstNumber;
     [HideInInspector] private int secondNumber;
-    [HideInInspector] private int twoNumbersResult;
     [SerializeField] private TextMeshPro textUI;
-
-    public int FirstNumber { get => firstNumber; set => firstNumber = value; }
-    public int SecondNumber { get => secondNumber; set => secondNumber = value; }
-    public int TwoNumbersResult { get => twoNumbersResult; set => twoNumbersResult = value; }
+    
     public TextMeshPro TextUI { get => textUI; set => textUI = value; }
 
     private void Awake() 

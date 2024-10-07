@@ -188,9 +188,9 @@ GameObject:
   - component: {fileID: 4886224200482944810}
   - component: {fileID: 4119285456426094468}
   - component: {fileID: 1088654108059767114}
-  - component: {fileID: 6793903819745523237}
+  - component: {fileID: 3159248860466647329}
   m_Layer: 0
-  m_Name: correct addition answer
+  m_Name: Correct sub answer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -342,7 +342,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burstParticles: {fileID: 864062481037583097, guid: 9eb362bbb820c434bb578a574082db9e, type: 3}
---- !u!114 &6793903819745523237
+--- !u!114 &3159248860466647329
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -351,7 +351,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7325191134820620907}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e244875e0ea037a458038fba7acfdadf, type: 3}
+  m_Script: {fileID: 11500000, guid: 6fbaa8256520fc944a1ad589895a1dd0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textUI: {fileID: 8395067068718188358}

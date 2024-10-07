@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1787608216427363888}
   - component: {fileID: 5054431204267756336}
-  - component: {fileID: 8522766833536326337}
+  - component: {fileID: 4700995146260652944}
   m_Layer: 0
-  m_Name: addition eqaution
+  m_Name: Subtraction eqaution
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -88,7 +88,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8522766833536326337
+--- !u!114 &4700995146260652944
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,7 +97,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6370327940111625358}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4429146af1a33f14088184586e560866, type: 3}
+  m_Script: {fileID: 11500000, guid: c30bd05ab8c054042bbf30d0552844eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   textUI: {fileID: 8051436481864344617}
@@ -202,7 +202,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 21 + 5
+  m_text: 21 - 5
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e32f6af45d246824dada1542967b53ae, type: 2}
   m_sharedMaterial: {fileID: 3989532796530173555, guid: e32f6af45d246824dada1542967b53ae, type: 2}
@@ -211,8 +211,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

@@ -52,11 +52,26 @@ public class BubbleButton : MonoBehaviour
                     RandomBubbleSpawner.bubbleSpawnerInstance.KillBubble(randomBubble);
                 }
                 
-                if(gameObject.GetComponent<AdditionBubbleProduct>() != null)
-                {
-                    Destroy(gameObject);
-                }
+                CheckCorrectAnswerBeforeKill();
             }
+        }
+    }
+
+    private void CheckCorrectAnswerBeforeKill()
+    {
+        if(gameObject.GetComponent<AdditionBubbleProduct>() != null)
+        {
+            Destroy(gameObject);
+        }
+
+        if(gameObject.GetComponent<SubtractionBubbleProduct>() != null)
+        {
+            Destroy(gameObject);
+        }
+
+        if(gameObject.GetComponent<MultiplicationBubblesProduct>() != null)
+        {
+            Destroy(gameObject);
         }
     }
 
