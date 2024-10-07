@@ -20,6 +20,7 @@ public class RandomBubble : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Bubble Wall"))
         {
+            SoundManager.PlaySound(SoundType.BubbleBurst);
             _killAction(this);
         }
     }

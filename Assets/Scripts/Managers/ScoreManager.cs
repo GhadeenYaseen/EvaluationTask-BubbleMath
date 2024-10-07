@@ -33,7 +33,8 @@ public class ScoreManager : MonoBehaviour
     {
         if(isCorrectAnswer)
         {
-            Debug.Log("update score");
+            SoundManager.PlaySound(SoundType.CorrectAnswer);
+
             _scoreCount += scoreAddedAmount;
             scoreText.text = _scoreCount.ToString();
 
@@ -43,12 +44,12 @@ public class ScoreManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("reset streak");
+            SoundManager.PlaySound(SoundType.WrongAnswer);
             CameraShaker.Instance.ShakeOnce(3f, 3f, 0.2f, 0.2f);
+            
             _streakCount = 0;
             streakText.text = " ";
             streakBubble.SetActive(false);
         }
-        
     }
 }

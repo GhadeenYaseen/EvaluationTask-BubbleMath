@@ -30,6 +30,9 @@ public class BubbleButton : MonoBehaviour
 
     private void CheckCollider()
     {
+        if(Time.timeScale == 0)
+            return;
+
         if(Input.GetMouseButtonDown(0))
         {
             RaycastHit2D hit = Physics2D.GetRayIntersection(Camera.main.ScreenPointToRay(Input.mousePosition));
@@ -37,6 +40,8 @@ public class BubbleButton : MonoBehaviour
             if(hit.collider == this._collider)
             {
                 Debug.Log("mouse cast hit bubble");
+                SoundManager.PlaySound(SoundType.BubbleBurst);
+                
                 ScoreMiddleMan.middleManInstance.GetClickedAnswer(int.Parse(gameObject.GetComponentInChildren<TextMeshPro>().text));
                 ScoreMiddleMan.middleManInstance.NotifyObservers(this);
 

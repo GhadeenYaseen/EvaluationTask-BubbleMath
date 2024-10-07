@@ -342,7 +342,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burstParticles: {fileID: 864062481037583097, guid: 9eb362bbb820c434bb578a574082db9e, type: 3}
-  animator: {fileID: 0}
 --- !u!114 &6793903819745523237
 MonoBehaviour:
   m_ObjectHideFlags: 0
