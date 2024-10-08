@@ -4,8 +4,10 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private GameObject winPanel;
+
     [SerializeField] private TextMeshProUGUI finalScore;
     [SerializeField] private TextMeshProUGUI timerText;
+
     [SerializeField] private float RemainingTime;
 
     void Start()
@@ -18,15 +20,18 @@ public class UIManager : MonoBehaviour
         if(RemainingTime > 0)
         {
             RemainingTime -= Time.deltaTime;
+            
         }
-        else if(RemainingTime < 0)
-        {
-            RemainingTime = 0;
-            DisplayWinPanel();
-        }
+        else 
+            if(RemainingTime <= 0)
+            {
+                RemainingTime = 0;
+                DisplayWinPanel();
+            }
 
         int Seconds = Mathf.FloorToInt(RemainingTime % 60);
         timerText.text = "Time: " + Seconds + "s";
+        
     }
 
     public void DisplayWinPanel()
@@ -34,10 +39,18 @@ public class UIManager : MonoBehaviour
         Time.timeScale = 0;
         finalScore.text = "Score " + ScoreManager.scoreManagerInstance._scoreCount;
         winPanel.SetActive(true);
+        SecondarySoundManager.secondarySoundManagerInstance.BackgroundSoundPlayer(false);
     }
 
-    public void ReplayRound()
+    public void PlayRound()
     {
         Time.timeScale = 1;
+        SoundManager.PlaySound(SoundType.UI);
+    }
+
+    public void PauseGame()
+    {
+        SoundManager.PlaySound(SoundType.UI);
+        Time.timeScale = 0;
     }
 }

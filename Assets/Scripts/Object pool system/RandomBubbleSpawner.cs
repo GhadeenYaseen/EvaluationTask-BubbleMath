@@ -4,11 +4,17 @@ using UnityEngine.Pool;
 
 public class RandomBubbleSpawner : MonoBehaviour
 {
+    [HideInInspector] public static RandomBubbleSpawner bubbleSpawnerInstance {get; private set;}
+
     [SerializeField] private RandomBubble _randomBubblePrefab;
     [SerializeField] private int _spawnAmount = 2;
     private int answer;
 
     private ObjectPool<RandomBubble> _randomBubblesPool;
+
+    private void Awake() {
+        bubbleSpawnerInstance = this;
+    }
     
     // object pool set up
     void Start()
@@ -47,6 +53,7 @@ public class RandomBubbleSpawner : MonoBehaviour
         for (int i = 0 ; i < _spawnAmount ; ++i)
         {
             var bubble = _randomBubblesPool.Get();
+            bubble.gameObject.GetComponent<SquashAndStretch>().PlaySquashAndStretch();
             bubble.Init(KillBubble);
         }
     }
@@ -59,7 +66,7 @@ public class RandomBubbleSpawner : MonoBehaviour
 
     private Vector3 RandomSpawnPosition()
     {
-        float x = Random.Range(0.47f,-2.95f);
+        float x = Random.Range(0.9f,-3.5f);
         float y = -5.97f;
 
         Vector3 vec3 = new Vector3(x,y,-0.05f);
@@ -67,8 +74,9 @@ public class RandomBubbleSpawner : MonoBehaviour
         return vec3;
     }
 
-    private void KillBubble(RandomBubble bubble)
+    public void KillBubble(RandomBubble bubble)
     {
+        bubble.gameObject.GetComponent<SquashAndStretch>().PlaySquashAndStretch();
         _randomBubblesPool.Release(bubble);
     }
 }
