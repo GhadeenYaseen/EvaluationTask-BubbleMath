@@ -151,7 +151,7 @@ MonoBehaviour:
   winPanel: {fileID: 2024189468}
   finalScore: {fileID: 804369641}
   timerText: {fileID: 1505861652}
-  RemainingTime: 20
+  RemainingTime: 60
 --- !u!4 &47683319
 Transform:
   m_ObjectHideFlags: 0
@@ -689,23 +689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 346705176}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -846,7 +829,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main Menu
+          m_StringArgument: Bubble Rush - Choose Difficulty
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &346705179
@@ -1392,7 +1375,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 47683318}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
@@ -1404,7 +1387,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 579526311}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Pause
         m_Mode: 1
@@ -1572,6 +1555,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1941901229}
   m_SourcePrefab: {fileID: 100100000, guid: abff6c91edc89134a982df9e4a061355, type: 3}
+--- !u!82 &579526311 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 887545936842377537, guid: abff6c91edc89134a982df9e4a061355, type: 3}
+  m_PrefabInstance: {fileID: 579526310}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &621667324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1701,23 +1689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 705248238}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -1858,7 +1829,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main Menu
+          m_StringArgument: Bubble Rush - Choose Difficulty
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &705248241
@@ -2297,8 +2268,6 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 7b22ff492a91d934eaba001e6ae7d6b2, type: 3}
     - {fileID: 8300000, guid: c806e113022bc874d9312136a7fae700, type: 3}
     - {fileID: 8300000, guid: 052ad88349ee92f4780b9b3f4afbf53d, type: 3}
-  - name: Pronunciation
-    sounds: []
 --- !u!1 &1118230543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2872,23 +2841,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1328104407}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -3020,7 +2972,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 47683318}
         m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
         m_MethodName: PlayRound
         m_Mode: 1
@@ -3032,9 +2984,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 579526311}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+        m_MethodName: UnPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3365,7 +3317,7 @@ GameObject:
   - component: {fileID: 1397854684}
   - component: {fileID: 1397854685}
   m_Layer: 5
-  m_Name: Midlle gameplay UI
+  m_Name: Middle gameplay UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3472,23 +3424,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 1491545562}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -3641,12 +3576,12 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Bubble Rush - Easy
+          m_StringArgument: Bubble Rush - Meduim
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UIManager, Assembly-CSharp
-        m_MethodName: PlayRound
+      - m_Target: {fileID: 579526311}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: UnPause
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

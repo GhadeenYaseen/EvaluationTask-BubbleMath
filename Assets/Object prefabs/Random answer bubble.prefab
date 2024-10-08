@@ -110,8 +110,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -344,7 +344,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burstParticles: {fileID: 864062481037583097, guid: 9eb362bbb820c434bb578a574082db9e, type: 3}
-  squashAndStretch: {fileID: 8290804937760818708}
 --- !u!114 &-8866227191288419970
 MonoBehaviour:
   m_ObjectHideFlags: 0

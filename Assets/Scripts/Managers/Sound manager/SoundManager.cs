@@ -9,7 +9,6 @@ public enum SoundType
     CorrectAnswer,
     WrongAnswer,
     BubbleBurst,
-    Pronunciation,
 }
 
 [RequireComponent(typeof(AudioSource)), ExecuteInEditMode]

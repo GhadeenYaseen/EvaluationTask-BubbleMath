@@ -151,7 +151,7 @@ MonoBehaviour:
   winPanel: {fileID: 740190542}
   finalScore: {fileID: 227055508}
   timerText: {fileID: 355446917}
-  RemainingTime: 20
+  RemainingTime: 60
 --- !u!4 &47683319
 Transform:
   m_ObjectHideFlags: 0
@@ -351,23 +351,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 75493135}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -848,23 +831,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 226622350}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -1863,23 +1829,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 606816150}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
@@ -3443,7 +3392,7 @@ GameObject:
   - component: {fileID: 1350839093}
   - component: {fileID: 1350839094}
   m_Layer: 5
-  m_Name: Midlle gameplay UI
+  m_Name: Middle gameplay UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4419,7 +4368,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Main Menu
+          m_StringArgument: Bubble Rush - Choose Difficulty
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2085096861
@@ -4473,23 +4422,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2085096864}
-          m_TargetAssemblyTypeName: ChristinaCreatesGames.Animations.SquashAndStretch,
-            Assembly-CSharp
-          m_MethodName: PlaySquashAndStretch
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
   - eventID: 4
     callback:
       m_PersistentCalls:
