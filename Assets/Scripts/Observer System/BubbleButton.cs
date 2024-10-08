@@ -1,3 +1,4 @@
+
 using TMPro;
 using UnityEngine;
 
@@ -10,12 +11,14 @@ public class BubbleButton : MonoBehaviour
     [SerializeField] ParticleSystem burstParticles;
     private ParticleSystem _burstParticlesInstance;
     private RandomBubble randomBubble;
+    private SquashAndStretch squashAndStretch;
 
     private void Awake() 
     {
         bubbleButtonInstance = this;
 
         randomBubble = gameObject.GetComponent<RandomBubble>();
+        squashAndStretch = gameObject.GetComponent<SquashAndStretch>();
     }
 
     private void Start() 
@@ -41,6 +44,7 @@ public class BubbleButton : MonoBehaviour
             {
                 Debug.Log("mouse cast hit bubble");
                 SoundManager.PlaySound(SoundType.BubbleBurst);
+                squashAndStretch.PlaySquashAndStretch();
                 
                 ScoreMiddleMan.middleManInstance.GetClickedAnswer(int.Parse(gameObject.GetComponentInChildren<TextMeshPro>().text));
                 ScoreMiddleMan.middleManInstance.NotifyObservers(this);

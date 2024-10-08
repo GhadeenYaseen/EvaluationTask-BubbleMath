@@ -53,6 +53,7 @@ public class RandomBubbleSpawner : MonoBehaviour
         for (int i = 0 ; i < _spawnAmount ; ++i)
         {
             var bubble = _randomBubblesPool.Get();
+            bubble.gameObject.GetComponent<SquashAndStretch>().PlaySquashAndStretch();
             bubble.Init(KillBubble);
         }
     }
@@ -75,6 +76,7 @@ public class RandomBubbleSpawner : MonoBehaviour
 
     public void KillBubble(RandomBubble bubble)
     {
+        bubble.gameObject.GetComponent<SquashAndStretch>().PlaySquashAndStretch();
         _randomBubblesPool.Release(bubble);
     }
 }

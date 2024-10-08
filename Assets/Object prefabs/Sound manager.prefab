@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1441134665000565426
+--- !u!1 &5757134936139570338
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,92 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3102546519359267967}
-  - component: {fileID: 9050426903232856058}
+  - component: {fileID: 4939190459236776616}
+  - component: {fileID: 2617340951199273886}
+  - component: {fileID: 5512266814875744619}
   m_Layer: 0
-  m_Name: Background music
+  m_Name: Sound manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3102546519359267967
+--- !u!4 &4939190459236776616
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441134665000565426}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 388138617250850749}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &9050426903232856058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1441134665000565426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a65d335fa4e760438319ad3c08cfcf6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 887545936842377537}
---- !u!1 &6930784680582114516
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 388138617250850749}
-  - component: {fileID: 887545936842377537}
-  m_Layer: 0
-  m_Name: BG music
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &388138617250850749
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6930784680582114516}
+  m_GameObject: {fileID: 5757134936139570338}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3102546519359267967}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!82 &887545936842377537
+--- !u!82 &2617340951199273886
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6930784680582114516}
+  m_GameObject: {fileID: 5757134936139570338}
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 7d94229225ed98141a209a19902f3a20, type: 3}
-  m_Resource: {fileID: 8300000, guid: 7d94229225ed98141a209a19902f3a20, type: 3}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 0.645
+  m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -175,3 +130,34 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &5512266814875744619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5757134936139570338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc2906b719f7c8c45b83c91eef54d8da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundsList:
+  - name: UI
+    sounds:
+    - {fileID: 8300000, guid: ea46081d5ad061e4383066520f86ccca, type: 3}
+  - name: CorrectAnswer
+    sounds:
+    - {fileID: 8300000, guid: adc5f4800a35a9441a437c0ca1e970e9, type: 3}
+    - {fileID: 8300000, guid: 723419c4a33a7de46bf08b0b92334795, type: 3}
+  - name: WrongAnswer
+    sounds:
+    - {fileID: 8300000, guid: 36ad1c0e3bc1e0f40b5f93107a0fdba8, type: 3}
+    - {fileID: 8300000, guid: b17e43b91ed25594d8d5d11bfadb488e, type: 3}
+  - name: BubbleBurst
+    sounds:
+    - {fileID: 8300000, guid: 7b22ff492a91d934eaba001e6ae7d6b2, type: 3}
+    - {fileID: 8300000, guid: c806e113022bc874d9312136a7fae700, type: 3}
+    - {fileID: 8300000, guid: 052ad88349ee92f4780b9b3f4afbf53d, type: 3}
+  - name: Pronunciation
+    sounds: []

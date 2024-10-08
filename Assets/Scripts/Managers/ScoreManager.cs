@@ -37,8 +37,11 @@ public class ScoreManager : MonoBehaviour
 
             _scoreCount += scoreAddedAmount;
             scoreText.text = _scoreCount.ToString();
+            scoreText.gameObject.GetComponentInParent<SquashAndStretch>().PlaySquashAndStretch();
+            
 
             streakBubble.SetActive(true);
+            streakBubble.GetComponent<SquashAndStretch>().PlaySquashAndStretch();
             _streakCount += 1;
             streakText.text = "+" + _streakCount.ToString();
         }

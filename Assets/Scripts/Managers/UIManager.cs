@@ -20,6 +20,7 @@ public class UIManager : MonoBehaviour
         if(RemainingTime > 0)
         {
             RemainingTime -= Time.deltaTime;
+            
         }
         else 
             if(RemainingTime <= 0)
@@ -30,6 +31,7 @@ public class UIManager : MonoBehaviour
 
         int Seconds = Mathf.FloorToInt(RemainingTime % 60);
         timerText.text = "Time: " + Seconds + "s";
+        
     }
 
     public void DisplayWinPanel()

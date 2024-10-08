@@ -190,6 +190,7 @@ GameObject:
   - component: {fileID: 3409969545128780337}
   - component: {fileID: -8866227191288419970}
   - component: {fileID: 6442722295714805446}
+  - component: {fileID: 8290804937760818708}
   m_Layer: 0
   m_Name: Random answer bubble
   m_TagString: Untagged
@@ -343,6 +344,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   burstParticles: {fileID: 864062481037583097, guid: 9eb362bbb820c434bb578a574082db9e, type: 3}
+  squashAndStretch: {fileID: 8290804937760818708}
 --- !u!114 &-8866227191288419970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,3 +373,61 @@ MonoBehaviour:
   speed: 4
   amp: 1
   self: {fileID: 6329110854335064166}
+--- !u!114 &8290804937760818708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8851584360403854719}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 676245eeb0264a84abfcac972e32b15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformToAffect: {fileID: 0}
+  axisToAffect: 2
+  animationDuration: 0.492
+  canBeOverwritten: 0
+  playOnStart: 0
+  playsEveryTime: 1
+  chanceToPlay: 100
+  initialScale: 1
+  maximumScale: 1.3
+  resetToInitialScaleAfterAnimation: 1
+  reverseAnimationCurveAfterPlaying: 0
+  squashAndStretchCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.25
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  looping: 0
+  loopingDelay: 0.5
