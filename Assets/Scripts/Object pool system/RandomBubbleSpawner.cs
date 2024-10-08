@@ -65,7 +65,7 @@ public class RandomBubbleSpawner : MonoBehaviour
 
     private Vector3 RandomSpawnPosition()
     {
-        float x = Random.Range(0.47f,-2.95f);
+        float x = Random.Range(0.9f,-3.5f);
         float y = -5.97f;
 
         Vector3 vec3 = new Vector3(x,y,-0.05f);

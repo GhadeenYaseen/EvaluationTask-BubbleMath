@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 4119285456426094468}
   - component: {fileID: 1088654108059767114}
   - component: {fileID: -3142190259467863268}
+  - component: {fileID: -1846409872488382695}
   m_Layer: 0
   m_Name: Correct multiply answer
   m_TagString: Untagged
@@ -355,3 +356,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textUI: {fileID: 8395067068718188358}
+--- !u!114 &-1846409872488382695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7325191134820620907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a4c3c507179754fad45cb611e63ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 4886224200482944810}
+  speed: 4
+  amp: 1
+  self: {fileID: 5530541413035561471}

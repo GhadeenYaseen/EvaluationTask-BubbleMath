@@ -21,12 +21,6 @@ public class SubtractionBubbleProduct : MonoBehaviour, IProduct
         textUI.text = twoNumbersResult.ToString();
     }
 
-    private void Update() 
-    {
-        Vector3 vec3 = new(0, 2 * Time.deltaTime, 0f);
-        transform.Translate(vec3);
-    }
-
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if(other.gameObject.CompareTag("Bubble Wall"))
@@ -45,7 +39,7 @@ public class SubtractionBubbleProduct : MonoBehaviour, IProduct
 
     public Vector3 SetPos()
     {
-        float x = Random.Range(0.47f,-2.95f);
+        float x = Random.Range(0.9f,-3.5f);
         float y = -5.97f;
 
         Vector3 vec3 = new Vector3(x,y,-0.05f);
