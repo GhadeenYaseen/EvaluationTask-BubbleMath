@@ -1,4 +1,4 @@
-## Welcome to Bubble Math by Ghadeen Yaseen and Beelabs!
+## Welcome to Bubble Math by Ghadeen Yaseen!
 
 ### Preview
 
